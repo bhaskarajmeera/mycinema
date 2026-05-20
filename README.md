@@ -4,15 +4,15 @@
 
 1. show Movie page with following sections
     - Hero section
-    - Header section
-    - Hero info
-    - Search form 
-    - Movie card
+        - Header 
+        - Hero info
+        - Search form 
+        - Movie card
 
     - Display Section
-    - List table
-    - Number of movies count
-    - Movies cards  
+        - List table
+        - Number of movies count
+        - Movies cards  
 
 ## Movie World Project Features
 
