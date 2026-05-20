@@ -19,7 +19,7 @@ export const Display = () => {
           <div className="row">
             <div className="col">
               {new Array(10).fill("").map((item,i)=>(<MovieCard key={i}/>))}
-              <MovieCard/>
+              {/* <MovieCard/> */}
             </div>
           </div>
       

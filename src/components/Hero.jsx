@@ -1,28 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MovieCard } from './MovieCard';
 import { fetchFromAPI } from '../utils/axios';
+import { randomChar } from '../utils/random';
 
+export const Hero = () => {
+const [searchedMovie,setSearchedMovie]= useState({});
+ useEffect(()=>{fetchMovie(randomChar());},[]);
 
-const movieStyle={backgroundImage:`url("https://www.omdbapi.com/src/poster.jpg")`,
+const fetchMovie = async(str) =>{
+  const movie = await fetchFromAPI(str);
+  searchedMovie(movie);
+};
+const movieStyle={backgroundImage:`url(${searchedMovie.Poster})`,
     backgroundRpeat:"no-repeat",
     backgroundPosition:"center",
     backgroundSize:"cover",
     heiht:"60vh",};
-
-export const Hero = () => {
-
-  useEffect(()=>{fetchMovie();},[]);
-
-const fetchMovie = async(str) =>{
-  const movie = await fetchFromAPI(str);
-  console.log(str);
-}
   return (
 <section>
   {/* navbar */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div className="container-md">
-          <a class="navbar-brand" href="#">My Cinema</a>
+          <a className="navbar-brand" href="#">My Cinema</a>
         </div>
       </nav>
   {/* hero content */}
@@ -36,7 +35,7 @@ const fetchMovie = async(str) =>{
       <button className="btn btn-danger" type="button" id="button-addon2">Search</button>
     </div>
     <div className="movie-card-display">
-      <MovieCard />
+      <MovieCard  searchedMovie={searchedMovie}/>
     </div>
 </div>
 </section>
