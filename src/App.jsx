@@ -8,14 +8,13 @@ function App() {
 
   return (
     <>
-      <Hero />
-      <Display />
-
-HELLO WORLD
-
-      
-
-      
+    <div className='wrapper'>
+    {/* hero section */}
+    <Hero />
+    {/* display section */}
+    <Display />
+    </div>
+    
     </>
   )
 }

@@ -1,7 +1,29 @@
 import React from 'react'
 
-export const MovieCard = () => {
+export const MovieCard = ({}) => {
+
+  const Poster = "https://www.omdbapi.com/src/poster.jpg";
   return (
-    <div>MovieCard</div>
+    <div className='containert movie-card-item'>
+      <div className='row text-dark p-3'>
+        <div className="col-md">
+          <img src={Poster} alt="" />
+        </div>
+        <div className="col-md">
+          <h3>Name</h3>
+          <p>ratings</p>
+          <p>description</p>
+          <div className='d-flex justify-content-between'>
+            <button type="button" className="btn btn-warning"> Drama </button>
+            <button type="button" className="btn btn-primary">Action</button>
+          </div>
+          <div className='d-grid mt-3'>
+            <button type="button" className="btn btn-danger">Delete</button>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
   )
 }

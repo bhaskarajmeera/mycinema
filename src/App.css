@@ -1,0 +1,15 @@
+.wrapper{
+  background-color: aliceblue;
+  min-height: 100vh;
+}
+
+.hero{
+    position:relative;
+    min-height: 80vh;
+    
+}
+
+.movie-card-item {
+  background: rgb(183, 170, 155);
+  border-radius: 10px;
+}
