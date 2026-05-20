@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MovieCard } from './MovieCard';
+import { fetchFromAPI } from '../utils/axios';
+
 
 const movieStyle={backgroundImage:`url("https://www.omdbapi.com/src/poster.jpg")`,
     backgroundRpeat:"no-repeat",
     backgroundPosition:"center",
     backgroundSize:"cover",
     heiht:"60vh",};
+
 export const Hero = () => {
+
+  useEffect(()=>{fetchMovie();},[]);
+
+const fetchMovie = async(str) =>{
+  const movie = await fetchFromAPI(str);
+  console.log(str);
+}
   return (
 <section>
   {/* navbar */}

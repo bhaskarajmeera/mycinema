@@ -4,7 +4,7 @@ export const MovieCard = ({}) => {
 
   const Poster = "https://www.omdbapi.com/src/poster.jpg";
   return (
-    <div className='containert movie-card-item'>
+    <div className='containert movie-card-item mt-5'>
       <div className='row text-dark p-3'>
         <div className="col-md">
           <img src={Poster} alt="" />
@@ -20,6 +20,7 @@ export const MovieCard = ({}) => {
           <div className='d-grid mt-3'>
             <button type="button" className="btn btn-danger">Delete</button>
           </div>
+          
           
         </div>
       </div>
