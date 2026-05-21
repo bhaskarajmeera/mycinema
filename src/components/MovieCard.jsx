@@ -1,7 +1,8 @@
 import React from 'react'
 
 export const MovieCard = ({searchedMovie}) => {
-const {Poster,Title,imdbRatings,Plot}= searchedMovie;
+  
+const {Poster,Title,imdbRating,Plot}= searchedMovie;
   
   return (
     <div className='containert movie-card-item mt-5'>
@@ -11,7 +12,7 @@ const {Poster,Title,imdbRatings,Plot}= searchedMovie;
         </div>
         <div className="col-md">
           <h3>{Title}</h3>
-          <p>IMDB Rating : {imdbRatings}</p>
+          <p>IMDB Rating : {imdbRating}</p>
           <p>{Plot}</p>
           <div className='d-flex justify-content-between'>
             <button type="button" className="btn btn-warning"> Drama </button>

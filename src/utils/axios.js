@@ -4,9 +4,12 @@ const apiEp=`http://www.omdbapi.com/?i=tt3896198&apikey=${apiKEY}&`;
 
 export const fetchFromAPI=async(str)=>{
     try{
-        const url=apiEp+"t="+str;
+        const url=`${apiEp}t=${str}`
+        
         const response=await axios.get(url);
-    console.log(response);
+
+console.log(response.data);
+console.log(typeof response.data);
     return response.data;
 }catch(error){console.log(error)}
 }

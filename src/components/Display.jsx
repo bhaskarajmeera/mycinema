@@ -1,7 +1,10 @@
 import React from 'react'
 import { MovieCard } from './MovieCard';
 
-export const Display = () => {
+export const Display = (
+{searchedMovie}
+) => {
+
   return (
     <div className='container mt-5'>
       <div className='row'>
@@ -18,8 +21,8 @@ export const Display = () => {
           </div>
           <div className="row">
             <div className="col">
-              {new Array(10).fill("").map((item,i)=>(<MovieCard key={i}/>))}
-              {/* <MovieCard/> */}
+              {/* {new Array(10).fill("").map((item,i)=>(<MovieCard key={i}/>))} */}
+              <MovieCard  searchedMovie={searchedMovie}/>
             </div>
           </div>
       

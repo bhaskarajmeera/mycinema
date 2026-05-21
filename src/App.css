@@ -9,10 +9,9 @@
   
     
 }
-
 .movie-card-item {
   background: rgba(205, 195, 184, 0.557);
-  backdrop-filter: blur(5px);
+
   border-radius: 10px;
   max-width: 450px;
 }
