@@ -21,11 +21,8 @@ const {Poster,Title,imdbRating,Plot}= searchedMovie;
           <div className='d-grid mt-3'>
             <button type="button" className="btn btn-danger">Delete</button>
           </div>
-          
-          
         </div>
       </div>
-      
     </div>
   )
 }
