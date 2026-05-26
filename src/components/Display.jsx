@@ -1,9 +1,7 @@
-import React from 'react'
+
 import { MovieCard } from './MovieCard';
 
-export const Display = (
-{searchedMovie}
-) => {
+export const Display = ({searchedMovie}) => {
 
   return (
     <div className='container mt-5'>
